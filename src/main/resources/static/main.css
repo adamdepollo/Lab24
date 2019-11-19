@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#passWarn {
+	display: none;
+}
+
+img {
+	max-width:300px;
+	max-height: 150px;
+}
