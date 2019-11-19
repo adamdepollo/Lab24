@@ -24,14 +24,5 @@ public class ProductDAO {
 	public List<Product> searchByName(String name) {
 		String searchQuery = "SELECT * FROM products WHERE name LIKE ('%" + name + "%')";
 		return jdbcTemplate.query(searchQuery, new BeanPropertyRowMapper<Product>(Product.class));
-		/*
-		List<Product> matches = new ArrayList<>();
-
-		for (Product p : prods) {
-			if (p.getName().contains(name)) {
-				matches.add(p);
-			}
-		}
-		return matches;*/
 	}
 }

@@ -15,18 +15,23 @@
 <body>
 	<div class="container">
 		<h1>Welcome to GC Coffee</h1>
-		<a href="/register-page" class="btn btn-dark">Register Here!</a>
-		<br><br>
+		<a href="/register-page" class="btn btn-dark">Register Here!</a> <br>
+		<br>
 		<form action="search-name" method="post">
+		<!-- Value here references an object appended in the search2 method in the HomeController file -->
 			<input type="text" name="name" value="${searchName}"
 				placeholder="Find products by name"> <input type="submit"
 				value="Search">
 
+			<!-- If the user already provided input for a search query (i.e., the url includes "/search-name"), 
+			then append a Clear button (link) to the webpage that 
+			takes the user back to the homepage, which displays the full product list -->
 			<c:if test="${ not empty searchName }">
 				<a href="/" class="btn btn-primary">Clear</a>
 			</c:if>
 		</form>
-		<br><br>
+		<br>
+		<br>
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -47,8 +52,8 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		
-		</div>
-		<script type="text/javascript" src="script.js"></script>
+
+	</div>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

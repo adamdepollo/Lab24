@@ -22,8 +22,6 @@ public class Lab24DAO {
 	
 	public int addUser(String firstName, String lastName, String email, String username, String password, String birthday) {
 		String addQuery = "INSERT INTO users (firstName, lastName, email, username, password, birthday) VALUES (?,?,?,?,?,?)";
-		// This method dumps the Strings fed in as parameters into the ? spaces in the
-		// addQuery statement.
 		return jdbcTemplate.update(addQuery, firstName, lastName, email, username, password, birthday);
 	}
 }
